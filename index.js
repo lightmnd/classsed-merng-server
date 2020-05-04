@@ -1,4 +1,4 @@
-require('dotenv').config({ path: __dirname + '/.env' });
+// require('dotenv').config({ path: __dirname + '/.env' });
 const { ApolloServer, PubSub } = require('apollo-server-express');
 const mongoose = require('mongoose');
 const express = require('express');
