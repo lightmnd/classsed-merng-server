@@ -33,9 +33,9 @@ mongoose
     
     // return app.listen({ port: PORT });
   })
-  .then(res => {
-    console.log(`Server running at ${PORT}`);
-  })
+  // .then(res => {
+  //   console.log(`Server running at ${PORT}`);
+  // })
   .then(() => {
     app.use("/images", express.static(path.join(__dirname, "/graphql/images")));
     server.applyMiddleware({ app });
