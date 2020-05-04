@@ -1,7 +1,7 @@
 {
   "name": "merng",
   "version": "1.0.0",
-  "description": "",
+  "description": "merng-client",
   "main": "index.js",
   "scripts": {
     "serve": "node index",
