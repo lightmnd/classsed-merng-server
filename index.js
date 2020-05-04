@@ -26,16 +26,11 @@ mongoose
   .connect(MONGODB, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log("MongoDB Connected");
-    //return server.listen({ port: PORT });
-    app.listen(PORT || 4000, function() {
-      console.log('Server listening on port 4000');
-    });
-    
-    // return app.listen({ port: PORT });
+    return app.listen({ port: PORT || 4000 });
   })
-  // .then(res => {
-  //   console.log(`Server running at ${PORT}`);
-  // })
+  .then(res => {
+    console.log(`Server running at ${PORT}`);
+  })
   .then(() => {
     app.use("/images", express.static(path.join(__dirname, "/graphql/images")));
     server.applyMiddleware({ app });
