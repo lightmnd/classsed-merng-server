@@ -4,13 +4,9 @@
   "description": "merng-client",
   "main": "index.js",
   "scripts": {
-    "dev": "react-scripts start",
-    "start": "serve -s build",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
-    },
+    "serve": "node index",
+    "start": "node index"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
