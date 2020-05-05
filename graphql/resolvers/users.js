@@ -23,19 +23,7 @@ function generateToken (user) {
 
 module.exports = {
   Query: {
-		// async getPost(_, { postId }) {
-		//   try {
-		//     const post = await Post.findById(postId);
-		//     if (post) {
-		//       return post;
-		//     } else {
-		//       throw new Error('Post not found');
-		//     }
-		//   } catch (err) {
-		//     throw new Error(err);
-		//   }
-		// }
-    async getUser (_, { username }) {
+		async getUser (_, { username }) {
       try {
         const user = await User.findOne({ username }); // .sort({ createdAt: -1 });
         if (user) {
@@ -110,7 +98,6 @@ module.exports = {
 				password,
 				confirmPassword
       );
-      console.log('>>>>>>>FILES', files)
       if (!valid) {
         throw new UserInputError('Errors', { errors });
       }
